@@ -1,0 +1,72 @@
+{
+  "name": "elastic-city-search-ssr",
+  "version": "1.0.0",
+  "description": "```zsh take elastic-city-seacrh-ssr ```",
+  "main": "index.js",
+  "scripts": {
+    "dev-client": "webpack-dev-server --config webpack.client.js",
+    "dev-server": "webpack -w --config webpack.server.js & nodemon app/nodemon.js",
+    "dev": "run-p dev-client dev-server",
+    "clean": "rimraf ./dist/",
+    "build-client": "NODE_ENV=production webpack --config webpack.client.js",
+    "build-server": "NODE_ENV=production webpack --config webpack.server.js",
+    "build": "yarn clean & run-p build-client build-server",
+    "start-node": "node app/server/",
+    "debug-node": "nodemon --inspect app/server/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcwmark/elastic-city-search-ssr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcwmark/elastic-city-search-ssr/issues"
+  },
+  "homepage": "https://github.com/dcwmark/elastic-city-search-ssr#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "vue-hot-reload-api": "^2.3.4",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.2.1",
+    "css-loader": "^3.2.0",
+    "elasticsearch": "^16.3.0",
+    "express": "^4.17.1",
+    "latest-version": "^5.1.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "path": "^0.12.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-meta": "^2.2.2",
+    "vue-router": "^3.1.3",
+    "vue-server-renderer": "^2.6.10",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1",
+    "vuex-router-sync": "^5.0.0",
+    "webpack": "^4.40.2",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
